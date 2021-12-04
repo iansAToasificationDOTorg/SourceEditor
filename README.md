@@ -22,5 +22,5 @@ Path or Name on line 2 comment<br>
 eg.<br>
 /* filePathName: path/nam2.html */<br><br>
 
-Files can't be deleted by the editor<br>
-Delete files via ssh session on rPi<br><br> 
+Paths can't be deleted by the editor<br>
+Delete paths via ssh session on rPi<br><br> 
