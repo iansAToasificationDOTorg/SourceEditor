@@ -7,14 +7,14 @@ Line 3 contains the last written date and time of this file
 Line 4 contains the last line number that was edited
 
 For PHP 
-<?php // 1st line defines doctype or tag
+&lt;?php // 1st line defines doctype or tag
 /* filePathName: eg_php/eg.php */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
 /* LineNo: 36 */
 
 For HTML
-<!DOCTYPE html>
-<html data-a="/* FilePathName: eg_php/eg.html */"
+&lt;!DOCTYPE html>
+&lt;html data-a="/* FilePathName: eg_php/eg.html */"
       data-b="/* Uploaded: 13:33:03,  Sat 4 Dec 2021 */"
       data-c="/* LineNo: 36 */" 
   lang="en">
