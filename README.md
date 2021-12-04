@@ -17,7 +17,9 @@ php, html, css, svg and javascript.<br>
 Create files; <br>
 via comment on line 2 of source text.<br>
 eg. <br>
-/* filePathName: nam_htm/nam.htm */<br><br>
+/* filePathName: nam_htm/nam.htm */<br>
+This will save the source text to<br>
+/var/www/html/e/nam_html/nam.html<br><br>
 
 To copy a file, just change its<br>
 Path or Name in the line 2 comment.<br>
