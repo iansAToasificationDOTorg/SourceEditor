@@ -22,7 +22,7 @@ eg. <br>
 To copy a file, just change its<br>
 Path or Name in the line 2 comment.<br>
 eg.<br>
-/* filePathName: name_html/nam2.html */<br><br>
+/* filePathName: nam_html/na2.html */<br><br>
 
 Paths can't be deleted by the editor.<br>
 Delete paths via ssh session on rPi.<br><br> 
