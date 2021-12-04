@@ -4,7 +4,7 @@ Source code editor for Apple devices
 Written for hosting on raspberry pi.
 
 Install in any subdirectory under
-/var/www/html
+/var/www/html<br>
 eg.
 /var/www/html/e/
 
