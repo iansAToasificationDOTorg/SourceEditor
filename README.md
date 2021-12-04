@@ -12,7 +12,7 @@ Browse <br>
 https://rPi.ip/e/editor.php<br><br>
 
 Create or Edit file types;<br>
-php, html, css and javascript.<br>
+php, html, css, svg and javascript.<br>
 
 Create files; <br>
 via comment on line 2 of source text.<br>
