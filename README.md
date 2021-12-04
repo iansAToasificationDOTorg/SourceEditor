@@ -20,7 +20,7 @@ eg. <br>
 /* filePathName: path/name.html */<br><br>
 
 To copy a file, just change its<br>
-Path or Name on the line 2 comment.<br>
+Path or Name in the line 2 comment.<br>
 eg.<br>
 /* filePathName: path/nam2.html */<br><br>
 
