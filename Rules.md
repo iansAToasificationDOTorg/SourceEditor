@@ -1,3 +1,4 @@
+<pre>
 Rules about lines 1 through 5 of all files
 The comments in lines 1 to 4 define aspects of this file
 Line 1 defines the type of file if html, php or svg
@@ -35,3 +36,6 @@ For any file type
 /* FilePathName: eg_php/eg.svg */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
 /* LineNo: 36 */-->
+
+</pre>
+
