@@ -30,5 +30,7 @@ Paths can't be deleted by the editor.<br>
 Delete paths via ssh session on rPi.<br><br> 
 
 A backup is copied to ./BAK folder<br>
-each time a file is saved.<br><br>
+each time a file is saved.<br>
+To restore from a backup, simply<br>
+rename the backup to the original name<br><br>
 
