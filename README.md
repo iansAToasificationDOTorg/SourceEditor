@@ -1,5 +1,5 @@
 # Source Editor
-Source code editor for Apple devices
+Source code editor for Apple devices.
 
 Written for hosting on raspberry pi.
 
@@ -10,17 +10,17 @@ eg.<br>
 Browse <br>
 https://rPi.ip/e/editor.php<br><br>
 
-Can Edit php, html, css and Javascript <br>
+Can Edit php, html, css and Javascript.<br>
 
 Create files <br>
-via comment on line 2 of source text<br>
+via comment on line 2 of source text.<br>
 eg. <br>
 /* filePathName: path/name.html */<br><br>
 
 To copy a file, just change its<br>
-Path or Name on line 2 comment<br>
+Path or Name on the line 2 comment.<br>
 eg.<br>
 /* filePathName: path/nam2.html */<br><br>
 
-Paths can't be deleted by the editor<br>
-Delete paths via ssh session on rPi<br><br> 
+Paths can't be deleted by the editor.<br>
+Delete paths via ssh session on rPi.<br><br> 
