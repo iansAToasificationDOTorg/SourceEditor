@@ -1,7 +1,8 @@
 # Source Editor
 Source code editor for Apple devices.
 
-Written for hosting on raspberry pi.
+Written for hosting on<br>
+HTTPS server. eg. raspberry pi.
 
 Install in any subdirectory under
 /var/www/html<br>
