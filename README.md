@@ -8,8 +8,10 @@ Install in any subdirectory under
 eg.<br>
 /var/www/html/e/<br>
 Browse <br>
-https://rpi.ip/e/editor.php <br>
-Can Edit php, html, css and Javascript 
+https://rpi.ip/e/editor.php<br><br>
+
+Can Edit php, html, css and Javascript <br>
+
 Create files <br>
 via comment on line 2 of file <br>
 eg. <br>
