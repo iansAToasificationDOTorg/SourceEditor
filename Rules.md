@@ -1,7 +1,7 @@
 <pre>
 Rules about lines 1 through 5 of all files
 The comments in lines 1 to 4 define aspects of this file
-Line 1 defines the type of file if html, php or svg
+Line 1 defines doctype or tag else whole line is comment 
 Line 2 defines the file path name of this file
 Line 3 contains the last written date and time of this file
 Line 4 contains the last line number that was edited
