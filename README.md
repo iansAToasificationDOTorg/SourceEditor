@@ -11,9 +11,10 @@ eg.<br>
 Browse <br>
 https://rPi.ip/e/editor.php<br><br>
 
-Can Edit php, html, css and Javascript.<br>
+Create or Edit file types;<br>
+php, html, css and javascript.<br>
 
-Create files <br>
+Create files; <br>
 via comment on line 2 of source text.<br>
 eg. <br>
 /* filePathName: path/name.html */<br><br>
