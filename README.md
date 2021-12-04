@@ -33,6 +33,6 @@ via terminal or ssh session on rPi.<br><br>
 A backup is copied to ./BAK folder<br>
 each time a file is saved.<br>
 To restore from a backup, simply<br>
-rename the backup to the<br>
-original name via terminal or ssh.<br><br>
+rename the backup to the original<br>
+path/name via terminal or ssh.<br><br>
 
