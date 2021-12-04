@@ -28,3 +28,7 @@ eg.<br>
 
 Paths can't be deleted by the editor.<br>
 Delete paths via ssh session on rPi.<br><br> 
+
+A backup is copied to ./BAK folder<br>
+each time a file is saved.<br><br>
+
