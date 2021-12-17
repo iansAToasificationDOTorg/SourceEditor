@@ -1,4 +1,4 @@
-<pre>
+<pre style="width:100%;">
 Rules about lines 1 through 5 of all files
 The comments in lines 1 to 4 define aspects of this file
 Line 1 defines doctype or tag else whole line is comment 
