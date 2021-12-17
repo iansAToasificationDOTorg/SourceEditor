@@ -12,7 +12,7 @@ Install in any subdirectory
 under /var/www/html
 eg.
 /var/www/html/e/
-Browse 
+Browse
 https://rPi.ip/e/editor_php
 
 
@@ -28,7 +28,7 @@ eg.
 filePathName: nam_htm/nam.htm
 This will save 
 the source text to
-/var/www/html/e/nam_htm/nam.htm
+./e/nam_htm/nam.htm
 
 
 To copy a file,
