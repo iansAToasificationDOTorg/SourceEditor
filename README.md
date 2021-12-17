@@ -26,9 +26,8 @@ Path or Name in the line 2 comment.<br>
 eg.<br>
 /* filePathName: nam_html/n2.html */<br><br>
 
-Paths can't be deleted by the editor.<br>
-Delete paths<br>
-via terminal or ssh session on rPi.<br><br> 
+Full filePathName and individual files can be Deleted vía the Editor
+
 
 A backup is copied to ./BAK folder<br>
 each time a file is saved.<br>
