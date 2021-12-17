@@ -19,17 +19,17 @@ via comment on line 2 of source text.<br>
 eg. <br>
 /* filePathName: nam_htm/nam.htm */<br>
 This will save the source text to<br>
-/var/www/html/e/nam_html/nam.html<br><br>
+/var/www/html/e/nam_htm/nam.htm<br><br>
 
 To copy a file, just change its<br>
 Path or Name in the line 2 comment.<br>
 eg.<br>
-/* filePathName: nam_html/n2.html */<br><br>
+/* filePathName: nam_htm/n2.htm */<br><br>
 
 Full filePathName and individual files can be Deleted vía the Editor
 
 
-A backup is copied to ./BAK folder<br>
+A backup is copied to ./nam_htm/BAK folder<br>
 each time a file is saved.<br>
 To restore from a backup, simply<br>
 rename the backup to the original<br>
