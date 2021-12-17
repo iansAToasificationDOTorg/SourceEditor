@@ -1,5 +1,5 @@
 # Source Editor
-<pre>
+<pre style="width:100%;">
 
 Source code editor for Apple devices.
 
