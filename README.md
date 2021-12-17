@@ -29,7 +29,8 @@ eg.<br>
 Full filePathName and individual files can be Deleted vía the Editor
 
 
-A backup is copied to ./nam_htm/BAK folder<br>
+A backup is copied to
+./nam_htm/BAK folder<br>
 each time a file is saved.<br>
 To restore from a backup, simply<br>
 rename the backup to the original<br>
