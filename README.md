@@ -20,25 +20,27 @@ Create or Edit file types;
 php, html, css, svg
 and javascript.
 
-Create files; 
-via comment on line 2
-of source text.
+Create files;
+Project File pathNames are
+created via comment on
+line 2 of source text.
 eg. 
-/* filePathName: nam_htm/nam.htm */
+filePathName: nam_htm/nam.htm
 This will save 
 the source text to
 /var/www/html/e/nam_htm/nam.htm
 
 
-To copy a file, just change its
-Path or Name in the line 2 comment.
+To copy a file,
+just change its Path 
+or Name in the line 2 comment.
 eg.
-/* filePathName: nam_htm/n2.htm */
+filePathName: nam_htm/n2.htm
 
 
 Full filePathName and
 individual files can
-be Deleted vía the Editor
+be Deleted via the Editor
 
 A backup is copied to
 ./nam_htm/BAK folder
