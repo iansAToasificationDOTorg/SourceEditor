@@ -1,4 +1,4 @@
-<pre style="width:100%;font-size:8px;">
+<pre style="width:100%;font:8px/7px '';">
 Rules about
 lines 1 through 5 of files
 
