@@ -18,7 +18,7 @@ last written dateTime of file
 Line 4 contains
 last line number edited
 
-<small>For PHP 
+<b>For PHP 
 &lt;?php // doctype or tag
 /* filePathName: eg_php/eg.php */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
@@ -47,7 +47,7 @@ For any file type
 <!-- 
 /* FilePathName: eg_php/eg.svg */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
-/* LineNo: 36 */--></small>
+/* LineNo: 36 */--></b>
 
 </pre>
 
