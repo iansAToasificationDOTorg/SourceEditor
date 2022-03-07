@@ -1,12 +1,15 @@
 <pre style="width:100%;font:8px/7px '';">
 Rules
-Install Path Name must be "editor_php/"
-Install File Name must be "editor.php"
+Install Path Name must be...
+ "editor_php/"
+
+Install File Name must be...
+ "editor.php"
 
 lines 1 through 5 of files
 
 The comments in 
-lines 1 to 4 define aspects file
+lines 1 to 4 define file details
 
 Line 1 
 defines doctype or tag 
