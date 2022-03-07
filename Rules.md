@@ -4,17 +4,17 @@ Install Directory is anything...
 eg. "ed/"
 
 Install Subdirectory must be...
- "editor_php/"
+ "edit_php/"
 
 Install File Name must be...
- "editor.php"
+ "edit.php"
 
 So
-/var/www/html/ed/editor_php/editor.php
+/var/www/html/ed/edit_php/edit.php
 
-standalone.js must be in editor_php/
+standalone.js must be in edit_php/
 
-f.ttf must be in parent dir (ed/)
+f.ttf must be in subdirectory (ed/)
 
 
 lines 1 through 5 of files
