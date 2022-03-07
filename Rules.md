@@ -12,7 +12,8 @@ Install File Name must be...
 So
 /var/www/html/e/edit_php/edit.php
 
-standalone.js must be in edit_php/
+notStandalone.js
+ must be in subdirectory edit_php/
 
 f.ttf must be in subdirectory (e/)
 
