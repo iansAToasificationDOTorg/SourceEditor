@@ -1,10 +1,17 @@
 <pre style="width:100%;font:8px/7px '';">
 Rules
-Install Path Name must be...
+Install Directory is anything...
+eg. "ed/"
+
+Install Subdirectory must be...
  "editor_php/"
 
 Install File Name must be...
  "editor.php"
+
+So
+/var/www/html/ed/editor_php/editor.php
+
 
 lines 1 through 5 of files
 
