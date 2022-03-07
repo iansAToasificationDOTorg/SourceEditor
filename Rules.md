@@ -1,5 +1,8 @@
 <pre style="width:100%;font:8px/7px '';">
-Rules about
+Rules
+Install Path Name must be "editor_php/"
+Install File Name must be "editor.php"
+
 lines 1 through 5 of files
 
 The comments in 
