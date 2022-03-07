@@ -1,7 +1,7 @@
 <pre style="width:100%;font:8px/7px '';">
 Rules
 Install Directory is anything...
-eg. "ed/"
+eg. "e/"
 
 Install Subdirectory must be...
  "edit_php/"
@@ -10,11 +10,11 @@ Install File Name must be...
  "edit.php"
 
 So
-/var/www/html/ed/edit_php/edit.php
+/var/www/html/e/edit_php/edit.php
 
 standalone.js must be in edit_php/
 
-f.ttf must be in subdirectory (ed/)
+f.ttf must be in subdirectory (e/)
 
 
 lines 1 through 5 of files
