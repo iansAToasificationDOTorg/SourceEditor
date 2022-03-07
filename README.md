@@ -24,8 +24,6 @@ Install in any subdirectory
 under /var/www/html
 eg.
 /var/www/html/e/
-Browse
-https://rPi.ip/e/edit_php/edit.php
 
 chown dir e/ and all subdirectories
 to chown -R www-data:www-data e/
@@ -38,6 +36,10 @@ Quick ugly insecure eg.
 chown 777 e/ for initial folders
 chown 666 for files
 
+Browse
+https://rPi.ip/e/edit_php/edit.php
+Add to Homescreen 
+for best experience 
 
 Create or Edit file types;
 php, html, css, svg
