@@ -4,9 +4,14 @@
 Source code editor 
 for Apple devices.
 
+This lets you edit websites
+without need for ftp or ssh
+because it is all done via php
+
 Written for hosting on
 HTTPS server.
- eg. Raspberry Pi etc.
+ eg. Raspberry Pi 
+  Apache Server etc.
 
 Will work without https but
 JavaScript written for security 
@@ -20,6 +25,17 @@ eg.
 /var/www/html/e/
 Browse
 https://rPi.ip/e/edit_php/edit.php
+
+chown dir e/ and all subdirectories
+to chown -R www-data:www-data e/
+Or appropriate owner group/name
+
+chmod such that php can create 
+files and folders.
+
+Quick ugly insecure eg.
+chown 777 e/ for initial folders
+chown 666 for files
 
 
 Create or Edit file types;
@@ -55,5 +71,7 @@ To restore a backup,
 simply rename the backup
 to the original path/name 
 via terminal or ssh.
+
+Enjoy 
 </pre>
 
