@@ -8,12 +8,18 @@ Written for hosting on
 HTTPS server.
  eg. Raspberry Pi etc.
 
+Will work without https but
+JavaScript written for security 
+sensitive features on 
+iOS and iPadOS, 
+must be hosted on https
+
 Install in any subdirectory 
 under /var/www/html
 eg.
 /var/www/html/e/
 Browse
-https://rPi.ip/e/editor_php
+https://rPi.ip/e/edit_php/edit.php
 
 
 Create or Edit file types;
