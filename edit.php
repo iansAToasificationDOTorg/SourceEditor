@@ -1,7 +1,7 @@
 <?php // 1st line defines file type or tag
 /* filePathName: edit_php/edit.php */
-/* Uploaded: 21:24:08,  Mon 7 Mar 2022 */
-/* LineNo: 240 */
+/* Uploaded: 23:46:13,  Mon 7 Mar 2022 */
+/* LineNo: 137 */
 
 header('Content-type: text/html; charset=utf-8');
 header("Cache-Control: no-cache, no-store, must-revalidate");
@@ -86,7 +86,7 @@ if(isset($_REQUEST['newPrj'])) {
      $t="<!--\n"
          ."/* FilePathName: ".$d.'/'.$fn." */\"\n"
          ."/* Uploaded: ".$udt." */\n"
-         ."/* LineNo: 6 */ -->\n"
+         ."/* LineNo: 4 */ -->\n"
          ."<svg xmlns=\"http://www.w3.org/2000/svg\" "
          ."viewBox=\"0 0 100 100\"\n"
          ."    style=\"background:yellow;\">\n"
@@ -100,11 +100,23 @@ if(isset($_REQUEST['newPrj'])) {
      $t="<!DOCTYPE html>\n"
         ."<html data-a=\"/* FilePathName: ".$d.'/'.$fn." */\"\n"
         ."           data-b=\"/* Uploaded: ".$udt." */\"\n"
-        ."           data-c=\"/* LineNo: 6 */\"\n"
+        ."           data-c=\"/* LineNo: 4 */\"\n"
         ."  lang=\"en\">\n"
         ."<head>\n"
-        ."<link rel='stylesheet' href='".$spn[0].".css'>\n"
-        ."\n</head>\n<body>\n<h1>&nbsp;This is - ".$d.'/'.$fn."</h1>\n"
+        ."<meta http-equiv=\"Content-Type\""
+        ." content=\"text/html;\" charset=\"utf-8\">\n"
+        ."<meta name=\"format-detection\" content=\"telephone=no\">\n"
+        ."<meta name=\"HandheldFriendly\" content=\"True\">\n"
+        ."<meta name=\"MobileOptimized\" content=\"320\">\n"
+        ."<meta name=\"apple-mobile-web-app-status-bar-style\""
+        ." content=\"black\">\n"
+        ."<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n"
+        ."<meta name=\"viewport\" content=\n    \"width=device-width,"
+        ."user-scalable=yes\">\n"
+        ."<meta name=\"channel\" content=\"channel:content:to:define!\">\n"
+        ."</head>\n<body>\n<h3>&nbsp;This is - ".$d.'/'.$fn."</h3>\n";
+        if($spn[1]=='php') $t.="\n<?php phpinfo(); ?>\n\n";
+        $t.="<link rel='stylesheet' href='".$spn[0].".css'>\n"
         ."<script src=".$spn[0].".js></script>\n"
         ."</body>\n</html>\n";
    }
@@ -114,15 +126,15 @@ if(isset($_REQUEST['newPrj'])) {
    $t="// commented or blank 1st  line for this editor system no tag for js\n"
         ."/* filePathName: ".$d.'/'.$spn[0].'.js'." */\n"
         ."/* Uploaded: ".$udt." */\n"
-        ."/* LineNo: 6 */\n\n"
-        ." setTimeout(function(){alert('".$d.'/'.$spn[0].'.js'."');},300);\n\n";
+        ."/* LineNo: 4 */\n\n"
+        ." setTimeout(function(){alert('This is ".$d.'/'.$spn[0].'.js'."');},300);\n\n";
    file_put_contents($npn, $t);
   @chmod($npn,0666);
    $npn=$p.'/'.$d.'/'.$spn[0].'.css';
    $t="/* Comment out 1st line for this editor system no tag for css */\n"
         ."/* filePathName: ".$d.'/'.$spn[0].'.css'." */\n"
         ."/* Uploaded: ".$udt." */\n"
-        ."/* LineNo: 6 */\n\n body{background:#ff0;}\n\n";
+        ."/* LineNo: 4 */\n\n body{margin:0;padding:0;background:#af5;}\n\n";
    file_put_contents($npn, $t);
   @chmod($npn,0666);
   exit;
@@ -1046,3 +1058,4 @@ background:#00f3;
 <pre id="wCal"></pre>
 </body>
 </html>
+
