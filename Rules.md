@@ -9,7 +9,7 @@ Install File Name must be...
 lines 1 through 5 of files
 
 The comments in 
-lines 1 to 4 define file details
+lines 1 to 4 define details
 
 Line 1 
 defines doctype or tag 
