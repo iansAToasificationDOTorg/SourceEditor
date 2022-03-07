@@ -12,7 +12,7 @@ Install File Name must be...
 So
 /var/www/html/ed/editor_php/editor.php
 
-standalone.js must be in editor_php
+standalone.js must be in editor_php/
 
 f.ttf must be in parent dir (ed/)
 
