@@ -7,6 +7,8 @@ for Apple devices.
 This lets you edit websites
 without need for ftp or ssh
 because it is all done via php
+ssh Terminal required for
+installation and maintenance 
 
 Written for hosting on
 HTTPS server.
