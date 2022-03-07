@@ -1,7 +1,7 @@
 //
-/* FilePathName: editor_php/notStandalone.js */
-/* Uploaded: 13:43:37,  Mon 7 Mar 2022 */
-/* LineNo: 106 */
+/* FilePathName: edit_php/notStandalone.js */
+/* Uploaded: 21:27:33,  Mon 7 Mar 2022 */
+/* LineNo: 87 */
 'use strict'
 
 function sA(p, a, v){p.setAttribute(a, v);}
@@ -99,7 +99,7 @@ function cTN(t){return document.createTextNode(t);}
   //aC(document.body,i);
   u=i.toDataURL();
   o=cE('meta'); o.name='apple-mobile-web-app-title';
-  o.content='Edit'+((new Date).getTime()/1000000000).toFixed(4).split('.')[1];
+  o.content='edit'+((new Date).getTime()/1000000000).toFixed(4).split('.')[1];
   aC(document.head,o);
   o=cE('link'); o.rel='apple-touch-icon'; o.sizes='180x180';
   o.href=u; aC(document.head,o);
