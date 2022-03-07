@@ -99,7 +99,7 @@ function cTN(t){return document.createTextNode(t);}
   //aC(document.body,i);
   u=i.toDataURL();
   o=cE('meta'); o.name='apple-mobile-web-app-title';
-  o.content='ze'+((new Date).getTime()/1000000000).toFixed(4).split('.')[1];
+  o.content='Edit'+((new Date).getTime()/1000000000).toFixed(4).split('.')[1];
   aC(document.head,o);
   o=cE('link'); o.rel='apple-touch-icon'; o.sizes='180x180';
   o.href=u; aC(document.head,o);
