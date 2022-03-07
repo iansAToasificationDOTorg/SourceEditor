@@ -18,6 +18,7 @@ JavaScript written for security
 sensitive features on 
 iOS and iPadOS, 
 must be hosted on https
+Self signed certificate works OK.
 
 Install in any subdirectory 
 under /var/www/html
