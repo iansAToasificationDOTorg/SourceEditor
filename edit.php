@@ -1,7 +1,8 @@
 <?php // 1st line defines file type or tag
 /* filePathName: edit_php/edit.php */
-/* Uploaded: 23:46:13,  Mon 7 Mar 2022 */
-/* LineNo: 137 */
+/* Uploaded: 17:14:14,  Wed 6 Jul 2022 */
+/* LineNo: 351 */
+/* Protocol: https: */
 
 // Free Open Source - Created by -  Ian Small, Australia
 
@@ -89,6 +90,7 @@ if(isset($_REQUEST['newPrj'])) {
          ."/* FilePathName: ".$d.'/'.$fn." */\"\n"
          ."/* Uploaded: ".$udt." */\n"
          ."/* LineNo: 4 */ -->\n"
+         ."/* Protocol: https: */ -->\n"
          ."<svg xmlns=\"http://www.w3.org/2000/svg\" "
          ."viewBox=\"0 0 100 100\"\n"
          ."    style=\"background:yellow;\">\n"
@@ -103,10 +105,11 @@ if(isset($_REQUEST['newPrj'])) {
         ."<html data-a=\"/* FilePathName: ".$d.'/'.$fn." */\"\n"
         ."           data-b=\"/* Uploaded: ".$udt." */\"\n"
         ."           data-c=\"/* LineNo: 4 */\"\n"
+        ."           data-d=\"/* Protocol: https: */\"\n"
         ."  lang=\"en\">\n"
         ."<head>\n"
         ."<meta http-equiv=\"Content-Type\""
-        ." content=\"text/html;\" charset=\"utf-8\">\n"
+        ."      content=\"text/html;\" charset=\"utf-8\">\n"
         ."<meta name=\"format-detection\" content=\"telephone=no\">\n"
         ."<meta name=\"HandheldFriendly\" content=\"True\">\n"
         ."<meta name=\"MobileOptimized\" content=\"320\">\n"
@@ -116,6 +119,14 @@ if(isset($_REQUEST['newPrj'])) {
         ."<meta name=\"viewport\" content=\n    \"width=device-width,"
         ."user-scalable=yes\">\n"
         ."<meta name=\"channel\" content=\"channel:content:to:define!\">\n"
+        ."<script>\n  'use strict'\n"
+        ."   window.onerror=function(m,u,l,c,e){\n"
+        ."     m=m.replace(': ','   — \\n'); c-=1; e=e.stack\n"
+        ."     alert(\n"
+        ."     m+'\\n@File:\\n'+u+'\\n@Line: '+l+',  @Char: '+c+'\\n\\n'+e\n"
+        ."      );\n"
+        ."     return;\n   }\n"
+        ."   function tc(e){alert(e.stack);return;}\n</script>\n"
         ."</head>\n<body>\n<h3>&nbsp;This is - ".$d.'/'.$fn."</h3>\n";
         if($spn[1]=='php') $t.="\n<?php phpinfo(); ?>\n\n";
         $t.="<link rel='stylesheet' href='".$spn[0].".css'>\n"
@@ -128,7 +139,8 @@ if(isset($_REQUEST['newPrj'])) {
    $t="// commented or blank 1st  line for this editor system no tag for js\n"
         ."/* filePathName: ".$d.'/'.$spn[0].'.js'." */\n"
         ."/* Uploaded: ".$udt." */\n"
-        ."/* LineNo: 4 */\n\n"
+        ."/* LineNo: 4 */\n"
+        ."/* Protocol: https: */\n\n'use strict'\n\n"
         ." setTimeout(function(){alert('This is ".$d.'/'.$spn[0].'.js'."');},300);\n\n";
    file_put_contents($npn, $t);
   @chmod($npn,0666);
@@ -136,7 +148,9 @@ if(isset($_REQUEST['newPrj'])) {
    $t="/* Comment out 1st line for this editor system no tag for css */\n"
         ."/* filePathName: ".$d.'/'.$spn[0].'.css'." */\n"
         ."/* Uploaded: ".$udt." */\n"
-        ."/* LineNo: 4 */\n\n body{margin:0;padding:0;background:#af5;}\n\n";
+        ."/* LineNo: 4 */\n"
+        ."/* Protocol: https: */\n\n"
+        ."body{margin:0;padding:0;background:#af5;}\n\n";
    file_put_contents($npn, $t);
   @chmod($npn,0666);
   exit;
@@ -262,7 +276,6 @@ window.onerror=function(m,u,l,c){
  }
  function tc(e){alert(e.stack);return;}
 
-  // alert(document.currentScript.id+'\n\n'+document.currentScript.src);
 function hasFocus(i){return document.activeElement.id==i;}
 function qS(t){return document.querySelector(t);}
 function qC(t){return document.querySelector(t).style;}
@@ -293,11 +306,11 @@ function sCP(p,v) {
 <b id="hideAll" style="text-align:center;font:bold 40px/200px '';
   position:fixed;top:0;left:0;height:110vh;width:100vw;
   display:inline-block;color:red;background:#afa;z-index:100;
-"></b><b id="topEditorHost">HOST DETAILS</b>
+" onclick=location.reload()></b><b id="topEditorHost">HOST DETAILS</b>
 <s><textarea id="lines"></textarea>
 <q></q><u></u><p></p><b id="hl"></b>
 <textarea id="ta"
-  onclick="selectLine(event, 1)" onkeyup="//valChange(event)"></textarea>
+  onclick="selectLine(event, 1)"></textarea>
 </s>
 <b id="tMenu"><b id="info">info</b>
 <b id="lineClicked" onclick="lastEditedLine(this)">Line Clicked</b>
@@ -312,6 +325,12 @@ function sCP(p,v) {
 <b id="copen"><b id="choose" onclick="choose()"
     >&nbsp;&nbsp;&nbsp;&nbsp;Choose</b>
 <b id=ssearch onclick="ss()">Search</b>
+<b id=files>
+ <b onclick=this.parentNode.style.display='none' class=f>Cancel</b>
+<br> <br>
+ <b onclick=saveToFiles(this) class=f>Save to Files App</b><br> <br>
+ <b onclick=openFile(this) class=f>Open from Files App</b>
+</b>
 </b>
 <b id="SaveView" onclick="if(event.timeStamp>1000) save(event)"
    >Save-View</b>
@@ -329,7 +348,7 @@ function sCP(p,v) {
 <canvas id=c></canvas>
 <b id=saved>Saved</b>
 <script>
-'use strict'
+'use strict' 
 var s=0,r=0,os=0,or=0,ds=0,dr=0,ms=0,mr=0,vurl='';
 var ot=0,ol=0,dt=0,dl=0,mt=0,ml=0, fpn='',fc=0,fcs='';
 var c,e,e1,x,u,t,dF=document.createDocumentFragment();
@@ -354,10 +373,10 @@ var lineCount=0, ln=0, lineClicked=0, nLines=0;
    qC('u').top='-150px';
 
 function dsel(){
-  if(confirm('DELETING '+fpn
+  if(confirm('DELETING '+cfn
     +'\n\n This could RUIN your day!\n\n ARE YOU SURE ?\n\n')) {
          choose();
-         setTimeout(function(){req('?dpn='+fpn);}, 130);
+         setTimeout(function(){req('?dpn='+cfn);}, 130);
   }
 }
 
@@ -424,7 +443,6 @@ function procSearch(v) {
     if((l+1)!=nLines) la[x]=l+1;
   }
   la=la.filter(onlyUnique);
-  //gE('info').innerText=la;
   l=parseInt(la[w]);
   if(isNaN(l)){l=0;a=[];la=[];w=0;al=0;}
   c=ta.value.split('\n')[l-1];
@@ -487,6 +505,7 @@ function sgln(){gE('gtn').value=lineClicked;}
 
 var lh=0;
 
+var timeDelay=1000;
 function save(e){
   gS('hideAll').visibility='visible';
   if(e.target.innerText.indexOf('load')>0) {
@@ -500,18 +519,28 @@ function save(e){
      if(fpn.indexOf('edit')>-1) { if(confirm(m)) req('save'); else reload(); }
    else req('save'); // if not an editor source 
    } else {
-     gE('hideAll').innerText='VIEWING\n'+vurl.split('/')[2]+'\nNo Changes';
-     setTimeout(function(){top.location.href=vurl}, 1000);
+     gE('hideAll').innerText='VIEWING\n'+vurl.split('/')[2]+'\nNo Changes.';
+     timeDelay=1000;
+     setTimeout(function(){
+          gE('hideAll').innerText=gE('hideAll').innerText
+               .replace('VIEWING', 'Returning to Editor!')
+               .replace(vurl.split('/')[2],'Not HTTPS: (no Automation)')
+               .replace('No Changes.','Touch to Continue!');
+          top.location=vurl;
+          timeDelay=5;
+     }, timeDelay);
    }
 }
 
 function reload() {
    gE('hideAll').innerText='RELOADING\n'+
-       top.location.pathname.split('/')[3]+'\nNo Changes';
+      top.location.pathname.split('/')[3]+'\nNo Changes.';
    setTimeout(function(){top.location.href='?'+(new Date).getTime();}, 1000);
 }
 
+var cfn;
 function getFile(fn){
+  cfn=fn;
   choose(); // close choose menu
   vurl='../'+fn.split('/')[1]+'/'+fn.split('/')[1].replace('_','.');
   setTimeout(function(){req('?fn='+fn);}, 1);
@@ -528,7 +557,6 @@ function ra(d) {
      gS('pcfe').visibility='visible';
      req('?remall='+d);
      chooseTimer(500);
-     //setTimeout(function(){choose();},500);
   }
 }
 
@@ -555,7 +583,6 @@ function req(n){
       }
       if(n.indexOf('dpn=')>-1){
          chooseTimer(500);
-         //setTimeout(function(){choose();}, 333);
          return;
       }
       if(n.indexOf('ch=')>-1){ // Read .chosen Return PathName
@@ -592,10 +619,16 @@ function req(n){
            try{
                if(tLines[3].indexOf('/* LineNo:')>-1) {
                  ln= parseInt(tLines[3].split(':')[1]);
+                 if(ln>tLines.length) ln=tLines.length-5;
                  lineClicked=ln;
                  gE('lineClicked').innerText='#'+(ln+1);
                  selectLine(ln-1, 1);
              }
+                if(tLines[4].indexOf('https')>8) {
+                   if(top.location.protocol=='http:') top.location.protocol='https:';
+                } else {
+                   if(top.location.protocol=='https:') top.location.protocol='http:';
+                }
            } catch(e){}
         }
       }
@@ -604,7 +637,7 @@ function req(n){
         setTimeout(function(){saved.visibility='visible';}, 300); 
         setTimeout(function(){
             saved.visibility='hidden';
-            top.location.href=vurl;
+            top.location=vurl;
         },1000);
       }
     }
@@ -623,10 +656,52 @@ function req(n){
   }
 }
 
+function saveToFiles(t) {
+  let e, a, n=vurl.split('/')[2];
+  e=n.split('').reverse().join('').split('.')[0].split('').reverse().join('');
+  n=n.replace('.'+e,'')+'_';
+  a=cE('a'); a.download=n+(new Date).getTime()+'.'+e;
+  a.href='data:text/'+e+';charset=utf-8,'+encodeURIComponent(ta.value);
+  a.click();
+  t.parentNode.style.display='none';
+}
+
+function openFile(t) {
+let i=cE('input'); i.className='cfi'; i.type='file';
+ document.body.appendChild(i); i.click();
+
+ i.addEventListener('change', () => {
+  let p, h, files = i.files;
+  if (files.length == 0) return;
+   p=i.value.split('\\');
+   p=p[p.length-1].replace(/\./g,'').replace(/_/g,'');
+   p=p+'_htm'+'/'+p+'.htm'; alert(p);
+   const file = files[0]; 
+   let reader = new FileReader();
+   reader.onload = (e) => {
+     const file = e.target.result;
+     const lines = file.split(/\r\n|\n/);
+     h='//<pre>\n/* FilePathName: '+p+' */\n'+
+          '/* Uploaded: ? */\n/* LineNo: ? */\n\n';
+     ta.value = h+lines.join('\n');
+     ln=3;
+    };
+    reader.onerror = (e) => alert(e.target.error.name);
+    reader.readAsText(file);
+    qS('s').scrollTop=0;
+});
+  t.parentNode.style.display='none';
+}
+
 var sss=0;
 function ss(){
- let s=gE('ssearch');
+ let e, n, a, s=gE('ssearch');
  let gt=gS('tMenu');
+ if(s.innerText=='Files') {
+  gS('files').display='inline-block';
+  cfClose();
+  return
+ }
  cfClose();
  sss++;
  sss=sss%2;
@@ -655,6 +730,7 @@ function choose(){
     req('?cf=x');
     gE('choose').innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!Choose';
     gE('SaveView').innerHTML='Editor Reload';
+    gE('ssearch').innerHTML='Files';
  } else cfClose();
 }
 
@@ -665,6 +741,7 @@ function cfClose() {
   cfc.innerHTML='';
   gE('choose').innerHTML='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Choose';
   gE('SaveView').innerHTML='Save-View';
+  gE('ssearch').innerHTML='Search';
   ch=0;
   chooseTimer(500);
  }
@@ -771,7 +848,7 @@ s:after {
   background:transparent;
  }
 #lines {
-  color:#00f;
+  color:#00f4;
   font: 16px/var(--lHt) '';
   background:repeating-linear-gradient(180deg, #eee, #eee var(--lHt),
                                    #fff var(--lHt), #fff calc(var(--lHt)*2)); 
@@ -836,10 +913,10 @@ u{background-color:#0f05;}
 #cf{visibility:hidden;padding:0;margin:0;}
 
 #cfc{
-  position:fixed;top:0;left:-2px;
+  position:fixed;top:0;left:-5px;
   display:inline-block;
   height:calc(100% - 1.55rem);
-  width:103%;
+  width:101vw;
   overflow-y:scroll;
   overflow-x:hidden;
   background:#cff;
@@ -1056,8 +1133,64 @@ background:#00f3;
  background:#fffa;
  visibility:hidden;
  }
+#files {
+ display:none;
+ position:fixed;
+ bottom:0px; right:5px;
+ height:230px;width:250px;
+ background:yellow;
+ padding:5px;
+ border:2px solid #000; border-radius:8px;
+}
+.f{
+ font:bold 2rem '';
+}
+ .cfi {color:transparent;}
+.cfi::-webkit-file-upload-button {display:none;}
+
+.cfi::before {
+  content: 'Select';
+  color: black;
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  font:bold 12px '';
+ background:#eee;
+}
 </style>
 <pre id="wCal"></pre>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
