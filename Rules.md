@@ -36,17 +36,22 @@ last written dateTime of file
 Line 4 contains
 last line number edited
 
+Line 5 contains
+protocol 
+
 <b>For PHP 
 &lt;?php // doctype or tag
 /* filePathName: eg_php/eg.php */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
 /* LineNo: 36 */
+/* Protocol: https: */
 
 For HTML
 &lt;!DOCTYPE html>
 &lt;html data-a="/* FilePathName: eg_php/eg.html */"
       data-b="/* Uploaded: 13:33:03,  Sat 4 Dec 2021 */"
       data-c="/* LineNo: 36 */" 
+      data-d="/* Protocol: https: */"
   lang="en">
 
 For JavaScript 
@@ -54,18 +59,21 @@ For JavaScript
 /* filePathName: eg_php/eg.js */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
 /* LineNo: 36 */
+/* Protocol: https: */
 
 For css
 // commented or blank 1st  line for this editor system no tag for css
 /* filePathName: eg_php/eg.css */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
 /* LineNo: 36 */
+/* Protocol: https: */
 
 For any file type
 <!-- 
 /* FilePathName: eg_php/eg.svg */
 /* Uploaded: 13:33:03,  Sat 4 Dec 2021 */
-/* LineNo: 36 */--></b>
+/* LineNo: 36 */
+/* Protocol: https: */ --></b>
 
 </pre>
 
